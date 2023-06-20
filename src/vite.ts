@@ -40,7 +40,6 @@ export default function i18n(langPath: string = 'lang'): Plugin {
         }
       }
     },
-    buildEnd: clean,
     handleHotUpdate(ctx) {
       if (/lang\/.*\.php$/.test(ctx.file)) {
         files = generateFiles(langPath, [...parseAll(frameworkLangPath), ...parseAll(langPath)])
